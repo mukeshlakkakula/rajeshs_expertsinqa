@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="251.999" height="233.333" viewBox="0 0 251.999 233.333">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="path14" d="M0-233.333H252V0H0Z"/>
+    </clipPath>
+  </defs>
+  <g id="g8" transform="translate(0 233.333)">
+    <g id="g10">
+      <g id="g12" clip-path="url(#clip-path)">
+        <g id="g18" transform="translate(46.845 -141.263)">
+          <path id="path20" d="M0,0,4.4-6.9l-5,3.672s-36.369-66.336-23.14-75.085c10.284-6.8,27.124-1.829,46.369,16.712-24.845-27.175-47.78-34.412-61.8-24.943-17.937,12.116.863,53.933,30.241,100.016" fill="#53c6cc"/>
+        </g>
+        <g id="g22" transform="translate(144.879 -71.118)">
+          <path id="path24" d="M0,0C-1.405,4.525-4.733,7.652-9.312,10.636-24.935,20.813-55.561-7.46-84-48.8l18.637-28.529L-45.568-82.7H-79.78L-93.649-63.275l-.032-.049-4.181,5.952-5.032,7.047.075.005-.023.032q1.484,2.274,3,4.557C-67.907,2.461-32.116,35.3-12.687,22.356-4.283,16.756.783,10.924,0,0" fill="#53c6cc"/>
+        </g>
+        <g id="g26" transform="translate(37.107 -81.719)">
+          <path id="path28" d="M0,0H-35.343l14.137-2.827L0-31.1,14.137-12.724H8.483Z" fill="#53c6cc"/>
+        </g>
+        <text id="text32" transform="translate(99.192 -95.905)" fill="#fff" font-size="159" font-family="Microsoft Himalaya"><tspan x="0" y="0">QA</tspan></text>
+        <text id="text36" transform="translate(14.853 -18.142)" fill="#fff" font-size="36" font-family="ArialMT, Arial"><tspan x="0" y="0">Experts</tspan></text>
+        <text id="text40" transform="translate(144.489 -17.475)" fill="#fff" font-size="47" font-family="BradleyHandITC, Bradley Hand ITC"><tspan x="0" y="0">in</tspan></text>
+        <text id="text44" transform="translate(190.416 -15.936)" fill="#4abcbc" font-size="36" font-family="BellMTBold, Bell MT"><tspan x="0" y="0">QA</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>
