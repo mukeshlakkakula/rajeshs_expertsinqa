@@ -32,12 +32,12 @@ export default function Header() {
       <header className="absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-6 md:px-12 md:py-8">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="relative w-32 h-12 md:w-48 md:h-16">
+          <div className="relative w-12 h-12 md:w-16 md:h-16">
             <Image
-              src="/QAlogo.svg"
-              alt="QA Experts in QA Logo"
+              src="/assets/favicon.ico"
+              alt="QA Experts Logo"
               fill
-              className="object-contain object-left"
+              className="object-contain"
               priority
             />
           </div>
@@ -76,7 +76,7 @@ export default function Header() {
           </Link>
 
           {/* Mobile menu toggle */}
-          <button 
+          <button
             onClick={() => setIsOpen(true)}
             className="lg:hidden p-2 text-[#ffffff] hover:text-brand transition-colors"
           >
@@ -86,22 +86,21 @@ export default function Header() {
       </header>
 
       {/* Mobile Menu Overlay */}
-      <div 
-        className={`fixed inset-0 z-[100] bg-black/95 backdrop-blur-2xl lg:hidden transition-all duration-500 ease-in-out ${
-          isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-        }`}
+      <div
+        className={`fixed inset-0 z-[100] bg-black/95 backdrop-blur-2xl lg:hidden transition-all duration-500 ease-in-out ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          }`}
       >
         <div className="flex flex-col h-full px-8 py-8">
           <div className="flex items-center justify-between mb-16">
-             <Link href="/" onClick={() => setIsOpen(false)} className="relative w-32 h-12">
-               <Image src="/QAlogo.svg" alt="Logo" fill className="object-contain object-left" />
-             </Link>
-             <button 
-               onClick={() => setIsOpen(false)}
-               className="w-12 h-12 rounded-full bg-[#ffffff]/5 flex items-center justify-center text-[#ffffff]"
-             >
-               <X className="w-6 h-6" />
-             </button>
+            <Link href="/" onClick={() => setIsOpen(false)} className="relative w-12 h-12">
+              <Image src="/assets/favicon.ico" alt="Logo" fill className="object-contain" />
+            </Link>
+            <button
+              onClick={() => setIsOpen(false)}
+              className="w-12 h-12 rounded-full bg-[#ffffff]/5 flex items-center justify-center text-[#ffffff]"
+            >
+              <X className="w-6 h-6" />
+            </button>
           </div>
 
           <nav className="flex flex-col gap-8 mb-16">
@@ -110,9 +109,8 @@ export default function Header() {
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className={`text-2xl font-heading font-bold text-[#ffffff] hover:text-brand transition-all transform ${
-                  isOpen ? "translate-x-0 opacity-100" : "-translate-x-8 opacity-0"
-                }`}
+                className={`text-2xl font-heading font-bold text-[#ffffff] hover:text-brand transition-all transform ${isOpen ? "translate-x-0 opacity-100" : "-translate-x-8 opacity-0"
+                  }`}
                 style={{ transitionDelay: `${i * 100}ms` }}
               >
                 {link.name}
@@ -129,7 +127,7 @@ export default function Header() {
               <span>Get in Touch</span>
               <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
             </Link>
-            
+
             <div className="flex justify-center gap-8 text-[#ffffff] opacity-60 text-sm py-4">
               <Link href="/privacy">Privacy</Link>
               <Link href="/terms">Terms</Link>

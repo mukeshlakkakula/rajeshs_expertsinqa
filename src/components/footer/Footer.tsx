@@ -12,21 +12,21 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
           {/* Brand Info */}
           <div className="col-span-1 md:col-span-1">
-              <Link href="/" className="inline-block mb-8">
-                <div className="relative w-40 h-16">
-                  <Image src="/QAlogo.svg" alt="Experts in QA Logo" fill className="object-contain object-left" />
-                </div>
-              </Link>
-             <p className="text-[#ffffff] opacity-60 leading-relaxed mb-8">
-               High-end IT and QA services dedicated to engineering excellence with discipline and speed.
-             </p>
-             <div className="flex gap-4">
-                {[Facebook, Twitter, Linkedin, Instagram].map((Icon, i) => (
-                  <Link key={i} href="#" className="w-10 h-10 rounded-full bg-[#ffffff]/5 flex items-center justify-center hover:bg-brand hover:text-[#000000] transition-all">
-                    <Icon className="w-5 h-5" />
-                  </Link>
-                ))}
-             </div>
+            <Link href="/" className="inline-block mb-8">
+              <div className="relative w-16 h-16">
+                <Image src="/assets/favicon.ico" alt="Experts in QA Logo" fill className="object-contain" />
+              </div>
+            </Link>
+            <p className="text-[#ffffff] opacity-60 leading-relaxed mb-8">
+              High-end IT and QA services dedicated to engineering excellence with discipline and speed.
+            </p>
+            <div className="flex gap-4">
+              {[Facebook, Twitter, Linkedin, Instagram].map((Icon, i) => (
+                <Link key={i} href="#" className="w-10 h-10 rounded-full bg-[#ffffff]/5 flex items-center justify-center hover:bg-brand hover:text-[#000000] transition-all">
+                  <Icon className="w-5 h-5" />
+                </Link>
+              ))}
+            </div>
           </div>
 
           {/* Quick Links */}
