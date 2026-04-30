@@ -15,7 +15,7 @@ export default function About() {
               <div className="absolute -top-6 -left-6 w-32 h-32 bg-brand/10 rounded-full blur-3xl" />
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-brand/10 rounded-full blur-3xl" />
               
-              <div className="relative h-full w-full rounded-[2.5rem] md:rounded-[3rem] overflow-hidden shadow-2xl border-4 md:border-8 border-white bg-gray-50">
+              <div className="relative h-full w-full rounded-[2.5rem] md:rounded-[3rem] overflow-hidden shadow-2xl border-4 md:border-8 border-card bg-card">
                 <Image
                   src="/assets/qa_team.png"
                   alt="Quality Assurance Team"
@@ -54,7 +54,7 @@ export default function About() {
           <div className="w-full flex-1 relative">
             <div className="relative w-full aspect-square max-w-md mx-auto">
               <div className="absolute -top-6 -right-6 w-32 h-32 bg-brand/10 rounded-full blur-3xl" />
-              <div className="relative h-full w-full rounded-[2.5rem] md:rounded-[3rem] overflow-hidden shadow-2xl border-4 md:border-8 border-white bg-gray-50">
+              <div className="relative h-full w-full rounded-[2.5rem] md:rounded-[3rem] overflow-hidden shadow-2xl border-4 md:border-8 border-card bg-card">
                 <Image
                   src="/assets/consulting.png"
                   alt="Consulting"

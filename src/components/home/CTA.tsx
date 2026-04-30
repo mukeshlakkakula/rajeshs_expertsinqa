@@ -20,7 +20,7 @@ export default function CTA() {
 
         <Link
           href="/contact"
-          className="inline-flex items-center justify-center w-40 h-40 md:w-56 md:h-56 rounded-full bg-foreground text-[#ffffff] group hover:bg-brand hover:text-[#000000] transition-all duration-700 relative"
+          className="inline-flex items-center justify-center w-40 h-40 md:w-56 md:h-56 rounded-full bg-foreground text-background group hover:bg-brand hover:text-black transition-all duration-700 relative"
         >
           <div className="absolute inset-0 rounded-full border-2 border-foreground group-hover:scale-110 transition-transform duration-700 opacity-20" />
           <div className="flex flex-col items-center gap-2">

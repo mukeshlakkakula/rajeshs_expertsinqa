@@ -21,16 +21,16 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-24 bg-[#1e293b] overflow-hidden">
+    <section className="py-24 bg-background-secondary overflow-hidden border-y border-border">
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div>
             <span className="text-brand font-bold tracking-widest uppercase text-sm mb-4 block">Testimonials</span>
-            <h2 className="text-2xl md:text-5xl font-heading font-bold text-[#ffffff] leading-tight mb-8 text-balance">
+            <h2 className="text-2xl md:text-5xl font-heading font-bold text-foreground leading-tight mb-8 text-balance">
               What Our <span className="text-brand italic">Clients</span> <br />
               Say About Us
             </h2>
-            <div className="flex items-center gap-4 text-white/20">
+            <div className="flex items-center gap-4 text-foreground/10">
               <Quote className="w-16 h-16" />
             </div>
           </div>
@@ -39,14 +39,14 @@ export default function Testimonials() {
             {testimonials.map((t, index) => (
               <div
                 key={index}
-                className="bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-[2rem] relative overflow-hidden"
+                className="bg-card backdrop-blur-xl border border-border p-8 rounded-[2rem] relative overflow-hidden shadow-sm dark:shadow-none"
               >
                 <div className="flex gap-1 text-brand mb-4">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 fill-brand" />
                   ))}
                 </div>
-                <p className="text-[#ffffff] opacity-80 text-lg leading-relaxed mb-8 relative z-10 italic">
+                <p className="text-foreground opacity-80 text-lg leading-relaxed mb-8 relative z-10 italic">
                   "{t.content}"
                 </p>
                 <div className="flex items-center gap-4">
@@ -54,8 +54,8 @@ export default function Testimonials() {
                     <Image src={t.avatar} alt={t.name} width={48} height={48} className="object-cover" />
                   </div>
                   <div>
-                    <h4 className="text-[#ffffff] font-bold">{t.name}</h4>
-                    <span className="text-[#ffffff] opacity-60 text-sm font-medium">{t.role}</span>
+                    <h4 className="text-foreground font-bold">{t.name}</h4>
+                    <span className="text-foreground opacity-60 text-sm font-medium">{t.role}</span>
                   </div>
                 </div>
               </div>

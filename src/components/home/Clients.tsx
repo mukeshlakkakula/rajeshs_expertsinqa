@@ -17,7 +17,7 @@ export default function Clients() {
   const allLogos = [...clientLogos, ...clientLogos, ...clientLogos];
 
   return (
-    <section className="py-12 bg-[#1e293b] overflow-hidden">
+    <section className="py-12 bg-background-secondary overflow-hidden">
       <div className="container mx-auto px-6 md:px-12 mb-8">
         <div className="text-center">
           <span className="text-brand font-bold tracking-widest uppercase text-sm">
@@ -31,7 +31,7 @@ export default function Clients() {
           {allLogos.map((logo, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-40 md:w-72 h-16 md:h-24 relative grayscale invert opacity-40 hover:opacity-100 hover:grayscale-0 transition-all duration-500 cursor-pointer"
+              className="flex-shrink-0 w-40 md:w-72 h-16 md:h-24 relative grayscale dark:invert opacity-40 hover:opacity-100 hover:grayscale-0 transition-all duration-500 cursor-pointer"
             >
               <Image
                 src={logo}

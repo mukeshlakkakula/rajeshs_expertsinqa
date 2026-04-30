@@ -23,7 +23,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="py-24 bg-[#1e293b] text-[#ffffff] overflow-hidden relative">
+    <section className="py-24 bg-background-secondary text-foreground overflow-hidden relative">
       {/* Decorative Background */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-brand/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2" />
@@ -35,7 +35,7 @@ export default function Services() {
             Engineering Excellence With <br />
             <span className="text-brand italic">Discipline & Speed</span>
           </h2>
-          <p className="text-[#ffffff] opacity-80 text-lg">
+          <p className="text-foreground opacity-70 text-lg">
             We deliver high-end solutions through a disciplined approach to software engineering, ensuring your business stays ahead of the curve.
           </p>
         </div>
@@ -44,13 +44,13 @@ export default function Services() {
           {services.map((service, index) => (
             <div 
               key={index}
-              className="group p-8 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-brand/50 transition-all duration-500 flex flex-col items-center text-center"
+              className="group p-8 rounded-3xl bg-card border border-border hover:border-brand/50 transition-all duration-500 flex flex-col items-center text-center shadow-sm dark:shadow-none"
             >
               <div className="w-16 h-16 rounded-2xl bg-brand/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
                 <service.icon className="w-8 h-8 text-brand" />
               </div>
               <h3 className="text-2xl font-heading font-bold mb-4">{service.title}</h3>
-              <p className="text-[#ffffff] opacity-70 leading-relaxed mb-8">
+              <p className="text-foreground opacity-70 leading-relaxed mb-8">
                 {service.description}
               </p>
               <Link 
