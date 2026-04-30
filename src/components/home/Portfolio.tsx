@@ -36,7 +36,7 @@ export default function Portfolio() {
           </div>
           <Link
             href="/portfolio"
-            className="px-8 py-4 border-2 border-foreground rounded-full font-bold hover:bg-foreground hover:text-white transition-all flex items-center gap-2"
+            className="px-8 py-4 border-2 border-foreground rounded-full font-bold hover:bg-foreground hover:text-[#ffffff] transition-all flex items-center gap-2"
           >
             View All Projects
             <ArrowUpRight className="w-5 h-5" />
@@ -53,9 +53,9 @@ export default function Portfolio() {
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
+                <div className="absolute inset-0 bg-gradient-to-t from-[#000000]/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
                   <div className="w-12 h-12 rounded-full bg-brand flex items-center justify-center translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <ArrowUpRight className="w-6 h-6 text-black" />
+                    <ArrowUpRight className="w-6 h-6 text-[#000000]" />
                   </div>
                 </div>
               </div>

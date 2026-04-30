@@ -20,7 +20,7 @@ export default function Clients() {
     <section className="py-12 bg-foreground overflow-hidden">
       <div className="container mx-auto px-6 md:px-12 mb-8">
         <div className="text-center">
-          <span className="text-brand font-bold tracking-widest uppercase text-sm opacity-60">
+          <span className="text-brand font-bold tracking-widest uppercase text-sm">
             Trusted by Leading Organizations
           </span>
         </div>

@@ -73,12 +73,12 @@ const StatItem = ({ stat }: { stat: typeof stats[0] }) => {
   return (
     <div ref={countRef} className="flex flex-col items-center text-center group">
       <div className="w-16 h-16 rounded-2xl bg-brand/10 flex items-center justify-center mb-6 group-hover:bg-brand transition-colors duration-500">
-        <stat.icon className="w-8 h-8 text-brand group-hover:text-black transition-colors duration-500" />
+        <stat.icon className="w-8 h-8 text-brand group-hover:text-[#000000] transition-colors duration-500" />
       </div>
       <span className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-2">
         {count}{stat.suffix}
       </span>
-      <span className="text-sm font-bold uppercase tracking-widest text-foreground/40 leading-relaxed">
+      <span className="text-sm font-bold uppercase tracking-widest text-foreground opacity-80 leading-relaxed">
         {stat.label}
       </span>
     </div>

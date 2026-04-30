@@ -49,7 +49,7 @@ export default function Header() {
             <Link
               key={link.name}
               href={link.href}
-              className="flex items-center gap-1 text-sm font-medium text-white/90 hover:text-white transition-colors"
+              className="flex items-center gap-1 text-sm font-medium text-[#ffffff] opacity-90 hover:opacity-100 transition-opacity"
             >
               {link.name}
               <ChevronDown className="w-3.5 h-3.5 opacity-60" />
@@ -57,7 +57,7 @@ export default function Header() {
           ))}
           <Link
             href="/insights"
-            className="px-5 py-2 text-sm font-medium text-white bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full transition-all"
+            className="px-5 py-2 text-sm font-medium text-[#ffffff] bg-[#ffffff]/10 hover:bg-[#ffffff]/20 backdrop-blur-md rounded-full transition-all"
           >
             Insight
           </Link>
@@ -65,12 +65,12 @@ export default function Header() {
 
         {/* Actions */}
         <div className="flex items-center gap-3">
-          <button className="flex items-center justify-center w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md text-white transition-all">
+          <button className="flex items-center justify-center w-10 h-10 rounded-full bg-[#ffffff]/10 hover:bg-[#ffffff]/20 backdrop-blur-md text-[#ffffff] transition-all">
             <Search className="w-5 h-5" />
           </button>
           <Link
             href="/contact"
-            className="hidden md:flex items-center px-6 py-2.5 text-sm font-bold text-white bg-brand hover:bg-brand/90 rounded-full transition-all shadow-lg shadow-brand/20"
+            className="hidden md:flex items-center px-6 py-2.5 text-sm font-bold text-[#ffffff] bg-brand hover:bg-brand/90 rounded-full transition-all shadow-lg shadow-brand/20"
           >
             Contact Us
           </Link>
@@ -78,7 +78,7 @@ export default function Header() {
           {/* Mobile menu toggle */}
           <button 
             onClick={() => setIsOpen(true)}
-            className="lg:hidden p-2 text-white hover:text-brand transition-colors"
+            className="lg:hidden p-2 text-[#ffffff] hover:text-brand transition-colors"
           >
             <Menu className="w-6 h-6" />
           </button>
@@ -98,7 +98,7 @@ export default function Header() {
              </Link>
              <button 
                onClick={() => setIsOpen(false)}
-               className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-white"
+               className="w-12 h-12 rounded-full bg-[#ffffff]/5 flex items-center justify-center text-[#ffffff]"
              >
                <X className="w-6 h-6" />
              </button>
@@ -110,7 +110,7 @@ export default function Header() {
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className={`text-2xl font-heading font-bold text-white hover:text-brand transition-all transform ${
+                className={`text-2xl font-heading font-bold text-[#ffffff] hover:text-brand transition-all transform ${
                   isOpen ? "translate-x-0 opacity-100" : "-translate-x-8 opacity-0"
                 }`}
                 style={{ transitionDelay: `${i * 100}ms` }}
@@ -124,13 +124,13 @@ export default function Header() {
             <Link
               href="/contact"
               onClick={() => setIsOpen(false)}
-              className="flex items-center justify-between w-full p-6 bg-brand rounded-3xl text-black font-bold group"
+              className="flex items-center justify-between w-full p-6 bg-brand rounded-3xl text-[#000000] font-bold group"
             >
               <span>Get in Touch</span>
               <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
             </Link>
             
-            <div className="flex justify-center gap-8 text-white/40 text-sm py-4">
+            <div className="flex justify-center gap-8 text-[#ffffff] opacity-60 text-sm py-4">
               <Link href="/privacy">Privacy</Link>
               <Link href="/terms">Terms</Link>
             </div>

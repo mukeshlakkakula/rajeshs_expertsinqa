@@ -7,7 +7,7 @@ import { Facebook, Twitter, Linkedin, Instagram } from "@/components/Icons";
 
 export default function Footer() {
   return (
-    <footer className="bg-foreground text-white py-24 border-t border-white/5">
+    <footer className="bg-foreground text-[#ffffff] py-24 border-t border-[#ffffff]/5">
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
           {/* Brand Info */}
@@ -17,12 +17,12 @@ export default function Footer() {
                  <Image src="/QAlogo.svg" alt="Experts in QA Logo" fill className="object-contain" />
                </div>
              </Link>
-             <p className="text-white/50 leading-relaxed mb-8">
+             <p className="text-[#ffffff] opacity-60 leading-relaxed mb-8">
                High-end IT and QA services dedicated to engineering excellence with discipline and speed.
              </p>
              <div className="flex gap-4">
                 {[Facebook, Twitter, Linkedin, Instagram].map((Icon, i) => (
-                  <Link key={i} href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand hover:text-black transition-all">
+                  <Link key={i} href="#" className="w-10 h-10 rounded-full bg-[#ffffff]/5 flex items-center justify-center hover:bg-brand hover:text-[#000000] transition-all">
                     <Icon className="w-5 h-5" />
                   </Link>
                 ))}
@@ -32,7 +32,7 @@ export default function Footer() {
           {/* Quick Links */}
           <div>
             <h4 className="text-lg font-bold mb-8 text-brand">Quick Links</h4>
-            <ul className="space-y-4 text-white/60">
+            <ul className="space-y-4 text-[#ffffff] opacity-70">
               {["Home", "Services", "Industries", "About", "Portfolio"].map((link) => (
                 <li key={link}>
                   <Link href={`/${link.toLowerCase()}`} className="hover:text-brand transition-colors">{link}</Link>
@@ -44,7 +44,7 @@ export default function Footer() {
           {/* Services */}
           <div>
             <h4 className="text-lg font-bold mb-8 text-brand">Services</h4>
-            <ul className="space-y-4 text-white/60">
+            <ul className="space-y-4 text-[#ffffff] opacity-70">
               {["Development Services", "QA Services", "IT Training Services"].map((service) => (
                 <li key={service}>
                   <Link href="/services" className="hover:text-brand transition-colors">{service}</Link>
@@ -56,7 +56,7 @@ export default function Footer() {
           {/* Contact Info */}
           <div>
             <h4 className="text-lg font-bold mb-8 text-brand">Address</h4>
-            <ul className="space-y-6 text-white/60">
+            <ul className="space-y-6 text-[#ffffff] opacity-70">
               <li className="flex gap-4">
                 <MapPin className="w-5 h-5 text-brand flex-shrink-0" />
                 <span>123, Tech Plaza, Silicon Valley, CA 94043</span>
@@ -73,11 +73,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-white/30 text-sm">
+        <div className="pt-12 border-t border-[#ffffff]/5 flex flex-col md:flex-row justify-between items-center gap-8 text-[#ffffff] opacity-50 text-sm">
           <p>© {new Date().getFullYear()} Experts in QA. All Rights Reserved.</p>
           <div className="flex gap-8">
-            <Link href="/privacy" className="hover:text-white">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-white">Terms of Service</Link>
+            <Link href="/privacy" className="hover:text-[#ffffff]">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-[#ffffff]">Terms of Service</Link>
           </div>
         </div>
       </div>

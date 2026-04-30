@@ -23,7 +23,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="py-24 bg-foreground text-white overflow-hidden relative">
+    <section className="py-24 bg-foreground text-[#ffffff] overflow-hidden relative">
       {/* Decorative Background */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-brand/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2" />
@@ -35,7 +35,7 @@ export default function Services() {
             Engineering Excellence With <br />
             <span className="text-brand italic">Discipline & Speed</span>
           </h2>
-          <p className="text-white/60 text-lg">
+          <p className="text-[#ffffff] opacity-80 text-lg">
             We deliver high-end solutions through a disciplined approach to software engineering, ensuring your business stays ahead of the curve.
           </p>
         </div>
@@ -50,7 +50,7 @@ export default function Services() {
                 <service.icon className="w-8 h-8 text-brand" />
               </div>
               <h3 className="text-2xl font-heading font-bold mb-4">{service.title}</h3>
-              <p className="text-white/50 leading-relaxed mb-8">
+              <p className="text-[#ffffff] opacity-70 leading-relaxed mb-8">
                 {service.description}
               </p>
               <Link 

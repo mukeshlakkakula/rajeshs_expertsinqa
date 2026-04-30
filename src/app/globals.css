@@ -3,6 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #1e293b;
+  --white: #ffffff;
+  --black: #000000;
 }
 
 @theme {
@@ -10,6 +12,8 @@
   --color-foreground: var(--foreground);
   --color-brand: #53c6cc;
   --color-brand-muted: rgba(83, 198, 204, 0.2);
+  --color-white-pure: var(--white);
+  --color-black-pure: var(--black);
   --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
   --font-heading: var(--font-eb-garamond), serif;
 }
@@ -18,10 +22,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
 }
 
+/* Stabilize colors to avoid system-dependent gray text */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #ffffff; /* Use pure white for foreground in dark mode to avoid gray */
   }
 }
 

@@ -33,7 +33,7 @@ export default function About() {
               Where Speed Meets <br />
               <span className="text-brand italic">Quality</span>
             </h2>
-            <p className="text-lg text-foreground/70 leading-relaxed mb-8">
+            <p className="text-lg text-foreground opacity-90 leading-relaxed mb-8">
               Our team of experts is dedicated to providing you with the best solutions for your business. We provide high-end IT services to our clients, ensuring that every project is delivered with the highest standards of quality and efficiency.
             </p>
             <div className="flex flex-col gap-4">
@@ -72,7 +72,7 @@ export default function About() {
               Unlock The <span className="text-brand">Potential</span> <br />
               Of Your Business
             </h2>
-            <p className="text-lg text-foreground/70 leading-relaxed mb-8">
+            <p className="text-lg text-foreground opacity-90 leading-relaxed mb-8">
               We empower businesses through innovative technology and meticulous quality assurance. Our approach combines speed with discipline to deliver results that exceed expectations.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

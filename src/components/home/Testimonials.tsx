@@ -26,7 +26,7 @@ export default function Testimonials() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div>
             <span className="text-brand font-bold tracking-widest uppercase text-sm mb-4 block">Testimonials</span>
-            <h2 className="text-2xl md:text-5xl font-heading font-bold text-white leading-tight mb-8 text-balance">
+            <h2 className="text-2xl md:text-5xl font-heading font-bold text-[#ffffff] leading-tight mb-8 text-balance">
               What Our <span className="text-brand italic">Clients</span> <br />
               Say About Us
             </h2>
@@ -46,7 +46,7 @@ export default function Testimonials() {
                     <Star key={i} className="w-4 h-4 fill-brand" />
                   ))}
                 </div>
-                <p className="text-white/70 text-lg leading-relaxed mb-8 relative z-10 italic">
+                <p className="text-[#ffffff] opacity-80 text-lg leading-relaxed mb-8 relative z-10 italic">
                   "{t.content}"
                 </p>
                 <div className="flex items-center gap-4">
@@ -54,8 +54,8 @@ export default function Testimonials() {
                     <Image src={t.avatar} alt={t.name} width={48} height={48} className="object-cover" />
                   </div>
                   <div>
-                    <h4 className="text-white font-bold">{t.name}</h4>
-                    <span className="text-white/40 text-sm font-medium">{t.role}</span>
+                    <h4 className="text-[#ffffff] font-bold">{t.name}</h4>
+                    <span className="text-[#ffffff] opacity-60 text-sm font-medium">{t.role}</span>
                   </div>
                 </div>
               </div>

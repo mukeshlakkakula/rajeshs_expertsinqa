@@ -38,7 +38,7 @@ export default function Hero() {
         {/* Content */}
         <div className="relative z-20 h-full flex flex-col justify-center items-center text-center px-6 md:items-start md:text-left md:px-20">
           <div className="max-w-3xl mt-12 md:mt-20">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white leading-[1.1] tracking-tight text-balance">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-[#ffffff] leading-[1.1] tracking-tight text-balance">
               Your Trusted
               <br />
               <span className="text-brand font-bold drop-shadow-sm">QA Experts</span>
@@ -47,7 +47,7 @@ export default function Hero() {
             <div className="mt-10 md:mt-20">
               <Link
                 href="/consultation"
-                className="inline-flex items-center gap-3 px-8 py-4 md:px-10 md:py-5 text-sm md:text-base font-bold text-white bg-brand hover:bg-brand/90 rounded-full transition-all duration-300 group shadow-xl shadow-brand/20 active:scale-95"
+                className="inline-flex items-center gap-3 px-8 py-4 md:px-10 md:py-5 text-sm md:text-base font-bold text-[#ffffff] bg-brand hover:bg-brand/90 rounded-full transition-all duration-300 group shadow-xl shadow-brand/20 active:scale-95"
               >
                 Free Consultation
                 <ArrowUpRight className="w-5 h-5 md:w-6 md:h-6 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
