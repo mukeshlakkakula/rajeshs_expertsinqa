@@ -7,16 +7,16 @@ import { Facebook, Twitter, Linkedin, Instagram } from "@/components/Icons";
 
 export default function Footer() {
   return (
-    <footer className="bg-foreground text-[#ffffff] py-24 border-t border-[#ffffff]/5">
+    <footer className="bg-[#1e293b] text-[#ffffff] py-24 border-t border-[#ffffff]/5">
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
           {/* Brand Info */}
           <div className="col-span-1 md:col-span-1">
-             <Link href="/" className="inline-block mb-8">
-               <div className="relative w-20 h-20">
-                 <Image src="/QAlogo.svg" alt="Experts in QA Logo" fill className="object-contain" />
-               </div>
-             </Link>
+              <Link href="/" className="inline-block mb-8">
+                <div className="relative w-40 h-16">
+                  <Image src="/QAlogo.svg" alt="Experts in QA Logo" fill className="object-contain object-left" />
+                </div>
+              </Link>
              <p className="text-[#ffffff] opacity-60 leading-relaxed mb-8">
                High-end IT and QA services dedicated to engineering excellence with discipline and speed.
              </p>

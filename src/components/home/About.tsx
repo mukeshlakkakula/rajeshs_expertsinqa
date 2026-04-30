@@ -5,7 +5,7 @@ import { CheckCircle2 } from "lucide-react";
 
 export default function About() {
   return (
-    <section className="py-24 bg-white overflow-hidden">
+    <section className="py-24 bg-background overflow-hidden">
       <div className="container mx-auto px-6 md:px-12">
         {/* First About Section */}
         <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16 mb-32">

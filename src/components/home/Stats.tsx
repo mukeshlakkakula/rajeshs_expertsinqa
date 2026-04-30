@@ -87,7 +87,7 @@ const StatItem = ({ stat }: { stat: typeof stats[0] }) => {
 
 export default function Stats() {
   return (
-    <section className="py-24 bg-white border-t border-foreground/5">
+    <section className="py-24 bg-background border-t border-foreground/5">
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
           {stats.map((stat, index) => (

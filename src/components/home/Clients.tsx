@@ -17,7 +17,7 @@ export default function Clients() {
   const allLogos = [...clientLogos, ...clientLogos, ...clientLogos];
 
   return (
-    <section className="py-12 bg-foreground overflow-hidden">
+    <section className="py-12 bg-[#1e293b] overflow-hidden">
       <div className="container mx-auto px-6 md:px-12 mb-8">
         <div className="text-center">
           <span className="text-brand font-bold tracking-widest uppercase text-sm">

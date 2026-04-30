@@ -29,15 +29,15 @@ export default function Header() {
 
   return (
     <>
-      <header className="absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-5 py-4 md:px-12 md:py-8">
+      <header className="absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-6 md:px-12 md:py-8">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="relative w-12 h-12 md:w-16 md:h-16">
+          <div className="relative w-32 h-12 md:w-48 md:h-16">
             <Image
               src="/QAlogo.svg"
               alt="QA Experts in QA Logo"
               fill
-              className="object-contain"
+              className="object-contain object-left"
               priority
             />
           </div>
@@ -93,8 +93,8 @@ export default function Header() {
       >
         <div className="flex flex-col h-full px-8 py-8">
           <div className="flex items-center justify-between mb-16">
-             <Link href="/" onClick={() => setIsOpen(false)} className="relative w-12 h-12">
-               <Image src="/QAlogo.svg" alt="Logo" fill className="object-contain" />
+             <Link href="/" onClick={() => setIsOpen(false)} className="relative w-32 h-12">
+               <Image src="/QAlogo.svg" alt="Logo" fill className="object-contain object-left" />
              </Link>
              <button 
                onClick={() => setIsOpen(false)}

@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function CTA() {
   return (
-    <section className="py-32 bg-white relative overflow-hidden">
+    <section className="py-32 bg-background relative overflow-hidden">
       {/* Decorative Text background */}
       <div className="absolute inset-0 flex items-center justify-center opacity-[0.03] pointer-events-none select-none overflow-hidden">
         <span className="text-[10vw] md:text-[12vw] font-black uppercase tracking-tighter whitespace-nowrap leading-none">

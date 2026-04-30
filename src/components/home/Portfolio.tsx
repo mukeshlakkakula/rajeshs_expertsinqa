@@ -24,7 +24,7 @@ const projects = [
 
 export default function Portfolio() {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-background">
       <div className="container mx-auto px-6 md:px-12">
         <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-16 gap-8">
           <div className="max-w-2xl text-center md:text-left">

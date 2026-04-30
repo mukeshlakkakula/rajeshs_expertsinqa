@@ -23,7 +23,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="py-24 bg-foreground text-[#ffffff] overflow-hidden relative">
+    <section className="py-24 bg-[#1e293b] text-[#ffffff] overflow-hidden relative">
       {/* Decorative Background */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-brand/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2" />

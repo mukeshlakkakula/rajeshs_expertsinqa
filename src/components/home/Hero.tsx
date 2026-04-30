@@ -15,8 +15,8 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative w-full h-[95vh] p-4 md:p-6 md:pb-0 bg-white">
-      <div className="relative w-full h-full rounded-[2rem] md:rounded-[3rem] overflow-hidden bg-black shadow-2xl">
+    <section className="relative w-full h-[60vh] md:h-[95vh] md:p-6 md:pb-0 bg-background">
+      <div className="relative w-full h-full md:rounded-[3rem] overflow-hidden bg-black shadow-2xl">
         {/* Header inside the rounded container */}
         <Header />
 
@@ -27,18 +27,19 @@ export default function Hero() {
           loop
           muted
           playsInline
+          poster="/assets/hero-poster.jpeg"
           className="absolute top-0 left-0 w-full h-full object-cover z-0"
         >
           <source src="/assets/herosectionVid.mp4" type="video/mp4" />
         </video>
 
         {/* Overlay */}
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/60 via-black/30 to-black/60 md:bg-gradient-to-r md:from-black/80 md:via-black/20 md:to-transparent z-10" />
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#000000]/70 via-[#000000]/40 to-[#000000]/70 md:bg-gradient-to-r md:from-[#000000]/80 md:via-[#000000]/20 md:to-transparent z-10" />
 
         {/* Content */}
         <div className="relative z-20 h-full flex flex-col justify-center items-center text-center px-6 md:items-start md:text-left md:px-20">
-          <div className="max-w-3xl mt-12 md:mt-20">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-[#ffffff] leading-[1.1] tracking-tight text-balance">
+          <div className="max-w-3xl mt-8 md:mt-20">
+            <h1 className="text-3xl md:text-6xl lg:text-7xl font-heading font-bold text-[#ffffff] leading-[1.1] tracking-tight text-balance">
               Your Trusted
               <br />
               <span className="text-brand font-bold drop-shadow-sm">QA Experts</span>
