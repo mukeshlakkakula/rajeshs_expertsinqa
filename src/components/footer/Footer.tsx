@@ -14,7 +14,7 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-1">
             <Link href="/" className="inline-block mb-8">
               <div className="relative w-16 h-16">
-                <Image src="/assets/favicon.ico" alt="Experts in QA Logo" fill className="object-contain" />
+                <Image src="/assets/favicon-96x96.png" alt="Experts in QA Logo" fill className="object-contain" />
               </div>
             </Link>
             <p className="text-[#ffffff] opacity-60 leading-relaxed mb-8">

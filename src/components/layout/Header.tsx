@@ -34,7 +34,7 @@ export default function Header() {
         <Link href="/" className="flex items-center gap-2 group">
           <div className="relative w-12 h-12 md:w-16 md:h-16">
             <Image
-              src="/assets/favicon.ico"
+              src="/assets/favicon-96x96.png"
               alt="QA Experts Logo"
               fill
               className="object-contain"
@@ -93,7 +93,7 @@ export default function Header() {
         <div className="flex flex-col h-full px-8 py-8">
           <div className="flex items-center justify-between mb-16">
             <Link href="/" onClick={() => setIsOpen(false)} className="relative w-12 h-12">
-              <Image src="/assets/favicon.ico" alt="Logo" fill className="object-contain" />
+              <Image src="/assets/favicon-96x96.png" alt="Logo" fill className="object-contain" />
             </Link>
             <button
               onClick={() => setIsOpen(false)}
