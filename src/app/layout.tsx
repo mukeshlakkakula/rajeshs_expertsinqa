@@ -12,7 +12,7 @@ const ebGaramond = EB_Garamond({
   variable: "--font-eb-garamond",
 });
 
-import { ThemeProvider } from "@/components/theme-provider";
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: "Experts in QA | Your Trusted Consulting Partner",
@@ -31,14 +31,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col font-sans bg-background text-foreground">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

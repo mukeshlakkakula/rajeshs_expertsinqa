@@ -18,7 +18,7 @@ export default function Hero() {
     <section className="relative w-full h-[60vh] md:h-[95vh] md:p-6 md:pb-0 bg-background">
       <div className="relative w-full h-full md:rounded-[3rem] overflow-hidden bg-black shadow-2xl">
         {/* Header inside the rounded container */}
-        <Header />
+        <Header isOverDark={true} />
 
         {/* Background Video */}
         <video

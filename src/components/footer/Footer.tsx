@@ -33,9 +33,17 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-bold mb-8 text-brand">Quick Links</h4>
             <ul className="space-y-4 text-foreground opacity-70">
-              {["Home", "Services", "Industries", "About", "Portfolio"].map((link) => (
-                <li key={link}>
-                  <Link href={`/${link.toLowerCase()}`} className="hover:text-brand transition-colors">{link}</Link>
+              {[
+                { name: "Home", href: "/" },
+                { name: "About Us", href: "/about" },
+                { name: "Our Services", href: "/services" },
+                { name: "Projects", href: "/projects" },
+                { name: "Join Us", href: "/careers" },
+              ].map((link) => (
+                <li key={link.name}>
+                  <Link href={link.href} className="hover:text-brand transition-colors">
+                    {link.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -59,11 +67,11 @@ export default function Footer() {
             <ul className="space-y-6 text-foreground opacity-70">
               <li className="flex gap-4">
                 <MapPin className="w-5 h-5 text-brand flex-shrink-0" />
-                <span>123, Tech Plaza, Silicon Valley, CA 94043</span>
+                <span>Plot No: 1-110/1, Kamareddy, Hyderabad, Telangana, India - 503111</span>
               </li>
               <li className="flex gap-4">
                 <Phone className="w-5 h-5 text-brand flex-shrink-0" />
-                <span>+91 987 654 3210</span>
+                <span>+91 837-469-6572</span>
               </li>
               <li className="flex gap-4">
                 <Mail className="w-5 h-5 text-brand flex-shrink-0" />
