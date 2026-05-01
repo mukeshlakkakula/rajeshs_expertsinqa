@@ -95,8 +95,8 @@ export default function ProjectsPage() {
           <div className="container mx-auto px-6 md:px-12">
             <motion.div {...fadeIn} className="text-center mb-20">
               <span className="text-brand font-bold tracking-[0.2em] uppercase text-xs mb-4 block">Projects</span>
-              <h2 className="text-4xl md:text-6xl font-heading font-bold text-foreground mb-6 leading-tight">
-                Bring The Revolution <br />
+              <h2 className="text-3xl md:text-6xl font-heading font-bold text-foreground mb-6 leading-tight">
+                Bring The Revolution <br className="hidden md:block" />
                 With The <span className="text-brand italic">Diligence Service</span>
               </h2>
             </motion.div>

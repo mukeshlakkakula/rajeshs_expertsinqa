@@ -98,8 +98,8 @@ export default function CareersPage() {
           <div className="container mx-auto px-6 md:px-12">
             <motion.div {...fadeIn} className="text-center mb-20">
               <span className="text-brand font-bold tracking-[0.2em] uppercase text-xs mb-4 block">Careers</span>
-              <h2 className="text-4xl md:text-6xl font-heading font-bold text-foreground mb-6 leading-tight">
-                Empowering The Next <br />
+              <h2 className="text-3xl md:text-6xl font-heading font-bold text-foreground mb-6 leading-tight">
+                Empowering The Next <br className="hidden md:block" />
                 Generation Of <span className="text-brand italic">QA Experts</span>
               </h2>
               <p className="text-lg text-foreground/60 max-w-2xl mx-auto">
@@ -144,8 +144,8 @@ export default function CareersPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
               <motion.div {...fadeIn}>
                 <span className="text-brand font-bold tracking-[0.2em] uppercase text-xs mb-6 block">Why Join Us</span>
-                <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-8 leading-tight">
-                  A Culture Built On <br />
+                <h2 className="text-3xl md:text-5xl font-heading font-bold text-foreground mb-8 leading-tight">
+                  A Culture Built On <br className="hidden md:block" />
                   <span className="text-brand italic">Trust & Excellence</span>
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">

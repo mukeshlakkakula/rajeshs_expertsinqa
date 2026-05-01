@@ -13,6 +13,7 @@ const ebGaramond = EB_Garamond({
 });
 
 import { Providers } from "./providers";
+import ScrollToTop from "@/components/layout/ScrollToTop";
 
 export const metadata: Metadata = {
   title: "Experts in QA | Your Trusted Consulting Partner",
@@ -31,7 +32,10 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col font-sans bg-background text-foreground">
-        <Providers>{children}</Providers>
+        <Providers>
+          {children}
+          <ScrollToTop />
+        </Providers>
       </body>
     </html>
   );

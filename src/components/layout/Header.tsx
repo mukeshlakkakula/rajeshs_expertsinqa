@@ -42,7 +42,19 @@ const navLinks = [
 
 export default function Header({ isOverDark = false }: { isOverDark?: boolean }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState(0);
+  const [expandedMenu, setExpandedMenu] = useState<string | null>(null);
+  const [expandedSubmenu, setExpandedSubmenu] = useState<string | null>(null);
+
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Prevent scrolling when menu is open
   useEffect(() => {
@@ -58,7 +70,13 @@ export default function Header({ isOverDark = false }: { isOverDark?: boolean })
 
   return (
     <>
-      <header className="absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-6 md:px-12 md:py-8">
+      <header 
+        className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between transition-all duration-300 ${
+          scrolled 
+            ? "bg-background/80 backdrop-blur-xl border-b border-border/50 px-6 py-4 md:px-12 md:py-4 shadow-lg" 
+            : "px-6 py-6 md:px-12 md:py-8"
+        }`}
+      >
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
           <div className="relative w-12 h-12 md:w-16 md:h-16">
@@ -176,31 +194,51 @@ export default function Header({ isOverDark = false }: { isOverDark?: boolean })
                 <div className="flex items-center justify-between">
                   <Link
                     href={link.href}
-                    onClick={() => setIsOpen(false)}
+                    onClick={() => {
+                      if (!link.submenus) setIsOpen(false);
+                    }}
                     className={`text-2xl font-heading font-bold text-foreground hover:text-brand transition-all transform ${isOpen ? "translate-x-0 opacity-100" : "-translate-x-8 opacity-0"}`}
                     style={{ transitionDelay: `${i * 100}ms` }}
                   >
                     {link.name}
                   </Link>
+                  {link.submenus && (
+                    <button
+                      onClick={() => setExpandedMenu(expandedMenu === link.name ? null : link.name)}
+                      className="p-2 text-brand"
+                    >
+                      <ChevronDown className={`w-6 h-6 transition-transform ${expandedMenu === link.name ? "rotate-180" : ""}`} />
+                    </button>
+                  )}
                 </div>
                 
-                {link.submenus && isOpen && (
-                  <div className="mt-4 ml-4 flex flex-col gap-4 border-l-2 border-brand/20 pl-4">
+                {link.submenus && expandedMenu === link.name && (
+                  <div className="mt-4 ml-4 flex flex-col gap-6 border-l-2 border-brand/20 pl-4">
                     {link.submenus.map((sub) => (
                       <div key={sub.title} className="flex flex-col gap-2">
-                        <span className="text-sm font-bold text-brand uppercase tracking-widest">{sub.title}</span>
-                        <div className="flex flex-col gap-2">
-                          {sub.items.map((item) => (
-                            <Link
-                              key={item}
-                              href={`/services/${item.toLowerCase().replace(/ /g, "-")}`}
-                              onClick={() => setIsOpen(false)}
-                              className="text-lg text-foreground/70 hover:text-brand transition-colors"
-                            >
-                              {item}
-                            </Link>
-                          ))}
-                        </div>
+                        <button
+                          onClick={() => setExpandedSubmenu(expandedSubmenu === sub.title ? null : sub.title)}
+                          className="flex items-center justify-between w-full text-left"
+                        >
+                          <span className="text-sm font-bold text-brand uppercase tracking-widest">{sub.title}</span>
+                          <ChevronDown className={`w-4 h-4 text-brand transition-transform ${expandedSubmenu === sub.title ? "rotate-180" : ""}`} />
+                        </button>
+                        
+                        {expandedSubmenu === sub.title && (
+                          <div className="flex flex-col gap-4 mt-2">
+                            {sub.items.map((item) => (
+                              <Link
+                                key={item}
+                                href={`/services/${item.toLowerCase().replace(/ /g, "-")}`}
+                                onClick={() => setIsOpen(false)}
+                                className="text-lg text-foreground/70 hover:text-brand transition-colors flex items-center gap-2"
+                              >
+                                <div className="w-1.5 h-1.5 rounded-full bg-brand/30" />
+                                {item}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
                       </div>
                     ))}
                   </div>
@@ -209,20 +247,15 @@ export default function Header({ isOverDark = false }: { isOverDark?: boolean })
             ))}
           </nav>
 
-          <div className="mt-auto space-y-6">
+          <div className="mt-auto">
             <Link
               href="/contact"
               onClick={() => setIsOpen(false)}
-              className="flex items-center justify-between w-full p-6 bg-brand rounded-3xl text-[#000000] font-bold group"
+              className="flex items-center justify-between w-full px-6 py-4 bg-brand rounded-2xl text-[#000000] font-bold group"
             >
               <span>Get in Touch</span>
-              <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
             </Link>
-
-            <div className="flex justify-center gap-8 text-foreground opacity-60 text-sm py-4">
-              <Link href="/privacy">Privacy</Link>
-              <Link href="/terms">Terms</Link>
-            </div>
           </div>
         </div>
       </div>

@@ -45,7 +45,7 @@ export default function AboutPage() {
           <div className="container mx-auto px-6 md:px-12">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
               <motion.div {...fadeIn} className="relative group">
-                <div className="relative w-full aspect-square max-w-md mx-auto rounded-full overflow-hidden border-[16px] border-background shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]">
+                <div className="relative w-full aspect-square max-w-md mx-auto rounded-full overflow-hidden border-8 md:border-[16px] border-background shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]">
                   <Image 
                     src="/assets/about-office.png" 
                     alt="Office" 
@@ -56,7 +56,7 @@ export default function AboutPage() {
                 <motion.div 
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
-                  className="absolute bottom-4 right-4 md:bottom-12 md:right-12 w-32 h-32 bg-brand rounded-full flex items-center justify-center text-black font-bold text-lg shadow-xl z-20"
+                  className="absolute bottom-0 right-0 md:bottom-12 md:right-12 w-28 h-28 md:w-40 md:h-40 bg-brand rounded-full flex items-center justify-center text-black font-bold text-base md:text-xl shadow-2xl z-20"
                 >
                   Since 2019
                 </motion.div>
@@ -64,8 +64,8 @@ export default function AboutPage() {
 
               <motion.div {...fadeIn}>
                 <span className="text-brand font-bold tracking-[0.2em] uppercase text-xs mb-6 block">Why Choose Us</span>
-                <h2 className="text-4xl md:text-6xl font-heading font-bold text-foreground mb-8 leading-[1.1]">
-                  We Maintain Quick And <br />
+                <h2 className="text-3xl md:text-6xl font-heading font-bold text-foreground mb-8 leading-[1.1]">
+                  We Maintain Quick And <br className="hidden md:block" />
                   <span className="text-brand italic underline decoration-brand/20 underline-offset-8">High Quality</span> Approach.
                 </h2>
                 <div className="space-y-6 text-foreground/70 text-lg leading-relaxed max-w-xl">
@@ -86,9 +86,9 @@ export default function AboutPage() {
           <div className="container mx-auto px-6 md:px-12">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
               <motion.div {...fadeIn} className="order-2 md:order-1">
-                <h2 className="text-4xl md:text-6xl font-heading font-bold text-foreground mb-8 leading-[1.1]">
-                  Preparing For Your <br />
-                  <span className="text-brand italic">Success</span> We Provide <br />
+                <h2 className="text-3xl md:text-6xl font-heading font-bold text-foreground mb-8 leading-[1.1]">
+                  Preparing For Your <br className="hidden md:block" />
+                  <span className="text-brand italic">Success</span> We Provide <br className="hidden md:block" />
                   Prominent IT Solutions
                 </h2>
                 <p className="text-lg text-foreground/70 mb-10 leading-relaxed max-w-xl">
@@ -157,7 +157,7 @@ export default function AboutPage() {
                 </div>
               </motion.div>
 
-              <motion.div {...fadeIn} className="relative h-[600px] rounded-[3rem] overflow-hidden shadow-2xl">
+              <motion.div {...fadeIn} className="relative h-[350px] md:h-[600px] rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl">
                 <Image 
                   src="/assets/about-approach.png" 
                   alt="Colleague" 
@@ -174,8 +174,8 @@ export default function AboutPage() {
         <section className="py-24 bg-background overflow-hidden">
           <div className="container mx-auto px-6 md:px-12">
             <div className="flex flex-col md:flex-row gap-20 items-center">
-              <motion.div {...fadeIn} className="flex-1 relative">
-                <div className="relative w-full aspect-[4/3] rounded-[3rem] overflow-hidden border-[16px] border-background-secondary shadow-2xl">
+              <motion.div {...fadeIn} className="flex-1 relative w-full">
+                <div className="relative w-full aspect-[4/3] rounded-[2rem] md:rounded-[3rem] overflow-hidden border-8 md:border-[16px] border-background-secondary shadow-2xl">
                   <Image 
                     src="/assets/about-team.png" 
                     alt="Impactful Solutions" 

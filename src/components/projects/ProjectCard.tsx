@@ -5,6 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
+import { useState } from "react";
+
 interface ProjectCardProps {
   project: {
     id: number;
@@ -18,6 +20,7 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project, variant = 'glass' }: ProjectCardProps) {
+  const [isExpanded, setIsExpanded] = useState(false);
   
   switch (variant) {
     case 'corporate':
@@ -96,15 +99,16 @@ export default function ProjectCard({ project, variant = 'glass' }: ProjectCardP
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="group relative aspect-[4/5] rounded-3xl overflow-hidden bg-background-secondary shadow-2xl"
+          onClick={() => setIsExpanded(!isExpanded)}
+          className={`group relative aspect-[4/5] rounded-3xl overflow-hidden bg-background-secondary shadow-2xl cursor-pointer`}
         >
-          <Image src={project.image} alt={project.title} fill className="object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-0 transition-opacity duration-500" />
-          <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          <Image src={project.image} alt={project.title} fill className={`object-cover transition-all duration-700 ${isExpanded ? 'grayscale-0 opacity-100 scale-105' : 'opacity-80 grayscale group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105'}`} />
+          <div className={`absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent transition-opacity duration-500 ${isExpanded ? 'opacity-0' : 'opacity-60 group-hover:opacity-0'}`} />
+          <div className={`absolute inset-0 bg-black/40 transition-opacity duration-500 ${isExpanded ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`} />
+          <div className={`absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent transition-opacity duration-500 ${isExpanded ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`} />
           <div className="absolute inset-x-8 bottom-12 text-white z-10">
-            <h3 className="text-2xl md:text-3xl font-bold mb-3 translate-y-2 group-hover:translate-y-0 transition-transform duration-500 leading-tight">{project.title}</h3>
-            <div className="overflow-hidden max-h-0 group-hover:max-h-48 transition-all duration-700 ease-in-out">
+            <h3 className={`text-2xl md:text-3xl font-bold mb-3 transition-transform duration-500 leading-tight ${isExpanded ? 'translate-y-0' : 'translate-y-2 group-hover:translate-y-0'}`}>{project.title}</h3>
+            <div className={`overflow-hidden transition-all duration-700 ease-in-out ${isExpanded ? 'max-h-48' : 'max-h-0 group-hover:max-h-48'}`}>
               <p className="text-white/90 text-base mb-6 leading-relaxed line-clamp-4">{project.description}</p>
               <Link 
                 href={`/projects/${project.id}`} 
